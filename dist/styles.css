@@ -21,8 +21,23 @@ h1, h2, h3 {
   margin-top: 0;
 }
 
+h1 {
+  font-size: 1.75rem;
+}
+@media (min-width: 43.75em) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 56.25em) {
+  h1 {
+    font-size: 2.625rem;
+  }
+}
+
 p {
   margin-top: 0;
+  font-size: 1rem;
 }
 
 a, a:visited, a:active {
@@ -38,22 +53,31 @@ a, a:visited, a:active {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  gap: 40px;
-  width: min(100% - 40px, 1000px);
+  gap: 2.5rem;
+  width: min(100% - 2.5rem, 62.5rem);
   margin-inline: auto;
 }
-@media (min-width: 900px) {
+@media (min-width: 56.25em) {
   .grid {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
   }
 }
 .grid__main, .grid__sidebar {
-  padding: 40px;
+  padding: 2.5rem;
 }
 .grid__main {
   background-color: hsl(246deg, 72%, 21%);
 }
-.grid__sidebar {
+@media (max-width: 56.24875em) {
+  .grid__sidebar {
+    text-align: center;
+  }
+}
+.grid__widget, .grid__widget--green {
   background-color: rgb(81, 6, 81);
+  padding: 1rem;
+}
+.grid__widget--green {
+  background-color: hsl(120deg, 100%, 25%);
 }/*# sourceMappingURL=styles.css.map */
